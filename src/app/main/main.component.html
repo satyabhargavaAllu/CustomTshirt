@@ -1,0 +1,41 @@
+<div id="overlay" *ngIf="showSpinner"></div>
+<div class="col-md-12" style="margin-top:10px">
+	<input type="radio" name='tshirtSide' [(ngModel)]='tshirtSide' [value]="true" (ngModelChange)="checkSide($event)" autocomplete="off">EditFrontSide
+	&nbsp;&nbsp;&nbsp;<input type="radio" name='tshirtSide'  [(ngModel)]='tshirtSide' [value]="false" (ngModelChange)="checkSide($event)" autocomplete="off">EditBackSide
+</div>
+<br>
+<div class="col-md-12" id="body-content">
+<div class="col-md-1">
+<div id="icon-styles" ><input type="color" [(ngModel)]="selectedColor" name="selectedColor" style="width:26px"/></div>
+<div id="icon-styles" (click)="addText(canvasSide)"><fa-icon [icon]=faFont></fa-icon></div>
+<div id="icon-styles" (click)="undo(canvasSide,tshirtSide)"><fa-icon [icon]=faUndo></fa-icon></div>
+<div id="icon-styles" (click)="redo(canvasSide,tshirtSide)"><fa-icon [icon]=faRedo></fa-icon></div>
+<div id="icon-styles" (click)="removeSelectedElement(canvasSide)"><fa-icon [icon]=faTrash></fa-icon></div>
+<div id="icon-styles" class="upload-btn-wrapper" (click)="removeSelectedElement(canvasSide)">
+	<fa-icon [icon]=faImages></fa-icon>
+		<input type="file" [(ngModel)]="uploadedFile" name="uploadedFile" (change)="fileUpload($event,canvasSide)" />
+</div>
+</div>
+
+ <div class="col-md-11" style="display:inline-flex">
+	<div class="tshirt-div"  [ngStyle]="{'background': (selectedColor)}">
+		<img src='../assets/tshirtFront.png'>
+		<div class="tshirt-canvas" id="front-canvas">
+			<canvas id='frontEditor' width='140' height='270'></canvas>
+		</div>
+	</div>
+
+	<div class="tshirt-div" id="back-div" [ngStyle]="{'background': (selectedColor)}">
+		<img src='../assets/tshirtBack.png'>
+		<div class="tshirt-canvas" id="back-canvas">
+			<canvas id='backEditor' width='140' height='270'></canvas>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="col-md-6" style="margin-top:10px;margin-left:8.9%;padding-left: 0px;padding-right: 0px;">
+	<button class='btn btn-success form-control' (click)=save()>Save</button>
+</div>
+
+

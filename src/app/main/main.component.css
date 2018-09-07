@@ -1,0 +1,65 @@
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#icon-styles{
+  border: 1px solid #dad8d8;
+  padding: 1.149em;
+  width:4.1em;
+  cursor:pointer;
+}
+
+#body-content{
+  display:inline-flex;
+  padding-left:0px;
+}
+
+#header{
+  text-align:center;
+  color:#b7b7b7;
+}
+
+.tshirt-div{
+width: 320px;
+height: 380px;
+position: relative;
+border:1px solid #dad8d8;
+}
+
+#back-div{
+margin-left:20px;
+}
+
+.tshirt-canvas{
+position: absolute;
+width: 140px;
+height: 270px;
+}
+
+#front-canvas{
+top: 50px;
+left: 88px;
+}
+
+#back-canvas{
+top: 40px;
+left: 88px;
+}
+
+#overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background: black url(../../assets/spinner.gif) center center no-repeat;
+  opacity:0.5;
+  z-index : 9999;
+}

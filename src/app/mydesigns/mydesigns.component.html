@@ -1,0 +1,5 @@
+<div id="shirtDiv">
+<div id="shirtInnerDiv"  *ngFor="let design of designs">
+<app-designed-tshirt [tshirtColor]='design.color' [imageUrl]='design.imageUrl' [id]='design.id'></app-designed-tshirt>
+</div>
+</div>

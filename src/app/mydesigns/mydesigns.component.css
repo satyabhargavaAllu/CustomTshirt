@@ -1,0 +1,8 @@
+#shirtDiv{
+display:inline-flex;
+flex-wrap:wrap;
+}
+
+#shirtInnerDiv{
+    margin:23px;
+}

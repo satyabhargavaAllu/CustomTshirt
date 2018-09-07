@@ -1,0 +1,10 @@
+<div class="container teal borderXwidth">
+    <h2>Tshirt Design</h2>
+    <a id='navigation-bar' 
+       *ngFor="let element of navListMenu" 
+       [routerLink]=element.link 
+       routerLinkActive="active" 
+       [routerLinkActiveOptions]="{exact:true}">
+       {{element.name}}
+    </a>
+</div>

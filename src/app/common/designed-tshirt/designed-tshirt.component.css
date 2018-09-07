@@ -1,0 +1,18 @@
+#display-elements{
+    display: inline-flex;
+}
+
+#image-div{
+    display: inline-flex;
+    height: 268px;
+    width: 220px;
+}
+
+#canvas-image{
+    width:100px;
+    height:192.8px;
+    margin-right: 0px;
+    position:  relative;
+    right: 165px;
+    top: 36px;
+}
